@@ -1,26 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,400&family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-gold: #D4AF37;
+  --color-gold-light: #F0D060;
+  --color-pink: #E8186D;
+  --color-pink-light: #FF4D9E;
+  --color-pink-dark: #B50050;
+  --color-red: #C00020;
+  --color-dark: #0A0A0A;
+  --color-dark-card: #111111;
+  --color-dark-alt: #1A1A1A;
+
+  --font-bebas: 'Bebas Neue', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-script: 'Dancing Script', cursive;
+  --font-playfair: 'Playfair Display', serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0A0A0A;
+  color: #FFFFFF;
+  overflow-x: hidden;
+}
+
+.font-bebas { font-family: 'Bebas Neue', sans-serif; }
+.font-script { font-family: 'Dancing Script', cursive; }
+.font-playfair { font-family: 'Playfair Display', serif; }
+
+/* Custom gradient utilities */
+.gradient-gold {
+  background: linear-gradient(135deg, #D4AF37 0%, #F0D060 50%, #D4AF37 100%);
+}
+
+.gradient-pink {
+  background: linear-gradient(135deg, #B50050 0%, #E8186D 50%, #FF4D9E 100%);
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #D4AF37, #F0D060, #D4AF37);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-pink {
+  background: linear-gradient(135deg, #FF4D9E, #E8186D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Noise overlay for texture */
+.noise-overlay {
+  position: relative;
+}
+.noise-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Section title style */
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+/* Quote decoration */
+.quote-mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  line-height: 0.5;
+  opacity: 0.3;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Platform button */
+.platform-btn {
+  transition: all 0.3s ease;
+}
+.platform-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #D4AF37; border-radius: 3px; }
+
+/* Nav underline animation */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: currentColor;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
 }
