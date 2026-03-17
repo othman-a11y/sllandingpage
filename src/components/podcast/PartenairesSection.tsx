@@ -1,44 +1,44 @@
 const partenaires = [
   {
     name: "Beur FM",
-    description: "Radio nationale. Sarah Linda est chroniqueuse depuis plusieurs années. Une collaboration majeure qui lui donne la parole sur l'essentiel.",
+    description: "Des médias comme Beur FM qui m'ont donné la parole.",
     logo: "📻",
     color: "#E8186D",
     featured: true,
   },
   {
-    name: "Apollo",
-    description: "Partenaire scène. Soutien artistique et production de spectacles.",
-    logo: "🎭",
+    name: "213 Concept Store",
+    description: "Des lieux comme 213 Concept Store qui ont ouvert leurs portes.",
+    logo: "🛍️",
     color: "#D4AF37",
     featured: false,
   },
   {
-    name: "bpifrance",
-    description: "Partenaire institutionnel qui soutient les projets entrepreneuriaux.",
-    logo: "🏦",
-    color: "#003189",
-    featured: true,
-  },
-  {
-    name: "France Télévisions",
-    description: "Collaborations et présence sur les antennes de France Télévisions Outre-mer.",
-    logo: "📺",
-    color: "#003189",
+    name: "Théâtre de la Clarté",
+    description: "Des scènes où l'énergie circule vraiment.",
+    logo: "🎭",
+    color: "#9B59B6",
     featured: false,
   },
   {
-    name: "Théâtre de la Clarte",
-    description: "Partenaire scène pour les spectacles et les représentations live.",
+    name: "Apollo Théâtre",
+    description: "Une scène d'exception où tout devient possible.",
     logo: "🎪",
     color: "#9B59B6",
     featured: false,
   },
   {
-    name: "23 Concept Store",
-    description: "Partenaire retail et événementiel.",
-    logo: "🛍",
-    color: "#1ABC9C",
+    name: "Bpifrance",
+    description: "Des institutions qui prouvent que culture et ambition peuvent dialoguer.",
+    logo: "🏦",
+    color: "#003189",
+    featured: true,
+  },
+  {
+    name: "France Télévisions Outre-mer",
+    description: "Présence sur les antennes, parce que la visibilité est un droit.",
+    logo: "📺",
+    color: "#003189",
     featured: false,
   },
 ];
@@ -47,23 +47,41 @@ export default function PartenairesSection() {
   return (
     <section className="bg-[#0D0D0D] py-20 px-6">
       <div className="max-w-5xl mx-auto">
+
         {/* Header */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-4 mb-4">
-            <span className="font-playfair text-5xl text-[#E8186D]/40">&ldquo;</span>
+            <span className="font-playfair text-5xl text-[#E8186D]/30">&ldquo;</span>
             <div>
               <h2 className="font-bebas text-5xl md:text-6xl tracking-wide text-white">
                 PARTENAIRES
               </h2>
-              <p className="font-script text-[#E8186D] text-xl">parce que ici il se passe rien</p>
+              <p className="font-script text-[#E8186D] text-xl mt-1">sans eux, il ne se passe rien</p>
             </div>
-            <span className="font-playfair text-5xl text-[#E8186D]/40">&rdquo;</span>
+            <span className="font-playfair text-5xl text-[#E8186D]/30">&rdquo;</span>
           </div>
           <div className="h-px w-32 bg-[#E8186D]/40 mx-auto" />
         </div>
 
+        {/* Intro text */}
+        <div className="max-w-2xl mx-auto text-center mb-14 space-y-3 text-white/65 font-montserrat text-sm leading-relaxed">
+          <p>
+            Ici, je parle d&apos;<span className="text-white font-semibold">impact</span>.
+            <br />
+            Mais l&apos;impact, ça ne se crée jamais seule.
+          </p>
+          <p>
+            Si je suis derrière un micro aujourd&apos;hui, si je monte sur scène, si je produis,
+            si je raconte…
+          </p>
+          <p className="text-white font-semibold">
+            C&apos;est aussi parce que des partenaires ont dit :{" "}
+            <span className="text-[#E8186D]">&ldquo;On y croit.&rdquo;</span>
+          </p>
+        </div>
+
         {/* Partners grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-14">
           {partenaires.map((p) => (
             <div
               key={p.name}
@@ -78,7 +96,7 @@ export default function PartenairesSection() {
                 {p.logo}
               </div>
               <h3
-                className="font-bebas text-xl tracking-wide mb-2"
+                className="font-bebas text-xl tracking-wide mb-2 leading-tight"
                 style={{ color: p.featured ? "white" : "rgba(255,255,255,0.7)" }}
               >
                 {p.name}
@@ -96,9 +114,31 @@ export default function PartenairesSection() {
           ))}
         </div>
 
+        {/* Closing manifesto */}
+        <div className="max-w-2xl mx-auto bg-[#111] border border-[#E8186D]/20 rounded-2xl p-8 space-y-4 text-white/70 font-montserrat text-sm leading-relaxed">
+          <div className="space-y-2">
+            <p>Un projet, ce n&apos;est pas juste du talent.</p>
+            <p><span className="text-white font-semibold">C&apos;est des alliances. C&apos;est de la confiance.</span></p>
+            <p>C&apos;est des gens qui <span className="text-[#E8186D] font-semibold">prennent le risque avec toi.</span></p>
+          </div>
+          <div className="h-px bg-white/10" />
+          <div className="space-y-1 text-white/50 italic">
+            <p>Sans eux, rien ne se passe.</p>
+            <p className="text-white not-italic font-semibold">Avec eux, tout devient possible.</p>
+            <p>Et le chemin continue.</p>
+            <p>Avec bienveillance. Avec conviction. Avec détermination.</p>
+          </div>
+          <div className="h-px bg-white/10" />
+          <p className="text-center text-white font-playfair italic text-base">
+            Je suis le capitaine de mon navire.<br />
+            Mais un navire avance mieux{" "}
+            <span className="text-[#E8186D]">quand l&apos;équipage croit à la traversée.</span>
+          </p>
+        </div>
+
         {/* CTA */}
-        <div className="mt-14 text-center">
-          <p className="font-montserrat text-white/50 text-sm mb-4">
+        <div className="mt-10 text-center">
+          <p className="font-montserrat text-white/40 text-sm mb-4">
             Vous souhaitez devenir partenaire ?
           </p>
           <a

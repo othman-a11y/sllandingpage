@@ -28,27 +28,34 @@ export default function StandUpHero() {
           </svg>
         </div>
 
-        {/* Subtitle */}
         <p className="font-montserrat text-sm tracking-[0.4em] uppercase text-white/60 mb-3">
-          Ma plus beau histoire d&apos;amour
+          Ma plus belle histoire d&apos;amour
         </p>
 
         <h1 className="font-bebas text-[clamp(4rem,14vw,12rem)] leading-none tracking-wide text-white drop-shadow-2xl">
           LE STAND UP
         </h1>
 
-        {/* Red accent */}
-        <div className="mt-4 flex items-center justify-center gap-3">
+        <div className="mt-5 flex items-center justify-center gap-3">
           <div className="h-0.5 w-12 bg-[#C00020]" />
-          <span className="font-script text-[#FF4D60] text-2xl">Rire</span>
+          <p className="font-montserrat text-white/70 text-sm md:text-base italic">
+            ma meilleure thérapie pour affronter la vie
+          </p>
           <div className="h-0.5 w-12 bg-[#C00020]" />
         </div>
 
-        <p className="mt-3 font-montserrat text-white/60 text-sm tracking-wider uppercase">
-          Parce que l&apos;humour déplace l&apos;une et les rires
-        </p>
+        {/* Le Point Virgule anecdote */}
+        <div className="mt-8 max-w-sm mx-auto bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl px-6 py-5 text-left">
+          <p className="font-bebas text-lg text-[#C00020] tracking-widest mb-2">LE POINT VIRGULE</p>
+          <p className="font-montserrat text-white/70 text-sm leading-relaxed">
+            Moi, devant un lieu mythique.
+          </p>
+          <p className="font-montserrat text-white/40 text-xs italic mt-2">
+            ps : j&apos;avoue je me la pete devant, mais juste pour la photo 😅
+          </p>
+        </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="#spectacles"
             className="px-8 py-3.5 bg-[#C00020] text-white font-bold text-sm tracking-widest uppercase rounded-full hover:bg-[#E00030] transition-all hover:scale-105"

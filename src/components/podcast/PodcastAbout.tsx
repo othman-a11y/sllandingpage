@@ -6,7 +6,6 @@ export default function PodcastAbout() {
           {/* Cover art */}
           <div className="flex justify-center">
             <div className="relative w-[260px] md:w-[320px]">
-              {/* Glow effect */}
               <div className="absolute inset-0 bg-[#E8186D]/30 rounded-2xl blur-2xl scale-110" />
               <div className="relative rounded-2xl overflow-hidden aspect-square bg-gradient-to-br from-[#E8186D] to-[#B50050]">
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -28,26 +27,28 @@ export default function PodcastAbout() {
               PODCAST
             </h2>
 
-            {/* Big quote */}
-            <div className="relative pl-6 border-l-2 border-[#E8186D]/50 mb-6">
-              <p className="font-playfair text-lg md:text-xl italic text-white/90 leading-relaxed">
-                &ldquo;Tu reconnais quelqu&apos;un parce que j&apos;ai changé de chemin pour trouver un nord.
-                J&apos;ai peut-être eu des allers-retours.&rdquo;
-              </p>
-            </div>
-
-            <div className="space-y-3 text-white/65 font-montserrat text-sm leading-relaxed">
+            <div className="space-y-4 text-white/70 font-montserrat text-sm md:text-base leading-relaxed">
               <p>
-                Tu trouveras des <span className="text-white font-semibold">témoignages sincères</span>, des parcours
-                inspirants, des personnes qui font des sans filtres. Des succès retentissants et des leçons de
-                vie pour un mouvement ultime.
+                Ici, je te raconte pourquoi j&apos;ai lancé ce podcast — et pourquoi j&apos;ai mis{" "}
+                <span className="text-white/50 italic">beaucoup trop de temps à trouver un nom…</span>
               </p>
-              <p className="text-white/80 font-semibold">
-                Humour, sincérité et culot : c&apos;est ce qui le définit.
+              <p className="text-white font-semibold">
+                Et, j&apos;ai fini par miser sur moi.
               </p>
-              <p className="text-[#E8186D] font-semibold">
-                Bref, ils veulent du mieux et mieux.
-                <br />Et toi, top on sort et serves Filtre !
+
+              <div className="my-5 pl-5 border-l-2 border-[#E8186D]/50 space-y-2">
+                <p>Tu y trouveras des <span className="text-white font-semibold">invités vrais</span>, des parcours sincères, des galères racontées sans filtre, des succès assumés, et des sujets de société qui nous concernent tous.</p>
+              </div>
+
+              <p className="text-white font-semibold text-base md:text-lg">
+                Humour, sincérité et culot :{" "}
+                <span className="text-[#E8186D]">c&apos;est la recette.</span>
+              </p>
+
+              <p className="text-white/50 italic">
+                Bref, bienvenue dans mon univers.
+                <br />
+                <span className="text-white/70 not-italic font-semibold">Drôle, inspirant et sans filtre.</span>
               </p>
             </div>
 
